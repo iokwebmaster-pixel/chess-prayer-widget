@@ -135,7 +135,8 @@ export default function Home() {
   const [californiaHours, californiaMinutes] =
     californiaTimeString.split(":").map(Number);
 
-  const nowMinutes = californiaHours * 60 + californiaMinutes;
+  const nowMinutes =
+    californiaHours * 60 + californiaMinutes;
 
   // --------------------------------
   // Determine if today is Friday
@@ -189,31 +190,34 @@ export default function Home() {
   // --------------------------------
   return (
     <main className="flex min-h-screen items-center justify-center bg-transparent">
-      <div className="w-full max-w-[380px] rounded-[24px] border border-[#D9CF91] bg-[#F0EEC7] px-4 py-3 shadow-sm">
+      <div className="w-full max-w-[380px] rounded-[24px] border border-[#d4c8aa] bg-[#e8dcbf] px-4 py-3 shadow-sm">
 
         {/* Header */}
-        <div className="rounded-full bg-[#CAA41A] px-4 py-2 text-center">
+        <div className="rounded-full bg-[#708090] px-4 py-2 text-center">
           <span className="text-[17px] font-semibold text-white">
-            IOK |{" "}
-            {new Date(date + "T12:00:00").toLocaleDateString("en-US", {
-              month: "long",
-              day: "numeric",
-              year: "numeric",
-            })}
+            IOK CHESS |{" "}
+            {new Date(date + "T12:00:00").toLocaleDateString(
+              "en-US",
+              {
+                month: "long",
+                day: "numeric",
+                year: "numeric",
+              }
+            )}
           </span>
         </div>
 
         {/* Column Headers */}
         <div className="mt-2 grid grid-cols-[1fr_72px_72px] items-center px-2 text-[13px]">
-          <div className="text-[#777777]">
+          <div className="text-[#708090]">
             Updated today
           </div>
 
-          <div className="text-center font-semibold text-[#333333]">
+          <div className="text-center font-semibold text-[#333]">
             Adhān
           </div>
 
-          <div className="text-center font-semibold text-[#333333]">
+          <div className="text-center font-semibold text-[#333]">
             Iqāmah
           </div>
         </div>
@@ -234,14 +238,13 @@ export default function Home() {
                 key={prayer.name}
                 className="grid grid-cols-[1fr_72px_72px] items-center px-2 py-[5px]"
               >
-
                 {/* Prayer Name */}
                 <div className="flex items-center gap-2">
                   <span
                     className={`flex w-5 justify-center text-[18px] ${
                       isCurrentPrayer
                         ? "text-[#9A7628]"
-                        : "text-[#CAA41A]"
+                        : "text-[#708090]"
                     }`}
                   >
                     {icons[prayer.name] || "○"}
@@ -251,7 +254,7 @@ export default function Home() {
                     className={`text-[15px] font-medium ${
                       isCurrentPrayer
                         ? "font-semibold text-[#9A7628]"
-                        : "text-[#333333]"
+                        : "text-[#333]"
                     }`}
                   >
                     {displayName}
@@ -263,7 +266,7 @@ export default function Home() {
                   className={`text-center text-[15px] ${
                     isCurrentPrayer
                       ? "font-semibold text-[#9A7628]"
-                      : "text-[#333333]"
+                      : "text-[#333]"
                   }`}
                 >
                   {prayer.time}
@@ -274,19 +277,19 @@ export default function Home() {
                   className={`text-center text-[15px] ${
                     isCurrentPrayer
                       ? "font-semibold text-[#9A7628]"
-                      : "text-[#333333]"
+                      : "text-[#333]"
                   }`}
                 >
                   {prayer.iqama || "—"}
                 </div>
-
               </div>
             );
           })}
         </div>
+
         {/* Upcoming Friday Khatib */}
         {jumuah?.khatib && (
-          <div className="mt-1 px-2 text-right text-[11px] text-[#777777]">
+          <div className="mt-1 px-2 text-right text-[11px] text-[#708090]">
             Khaṭīb: {jumuah.khatib}
           </div>
         )}

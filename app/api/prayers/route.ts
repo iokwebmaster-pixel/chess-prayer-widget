@@ -1,5 +1,5 @@
 const CSV_URL =
-  "https://docs.google.com/spreadsheets/d/e/2PACX-1vSthdi63tI5yb2x7MVsr9RIanVHJEoDHWTasrwSUexRCyCJB0KpbfLWjqPBWoPVX_MGbuVF75rCitnT/pub?output=csv";
+  "https://docs.google.com/spreadsheets/d/e/2PACX-1vQZ6eFrjM2yI9k-wmavgmngMPNpPiBeQ0Ywy7QG6EWRtz1jwJ7ET-UhsXqfcvDUCSaLmLT2JHhBKVTf/pub?output=csv";
 function parseCSV(csv: string) {
   const lines = csv.trim().split("\n");
 
