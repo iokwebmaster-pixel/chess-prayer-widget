@@ -194,7 +194,7 @@ export default function Home() {
         {/* Header */}
         <div className="rounded-full bg-[#CAA41A] px-4 py-2 text-center">
           <span className="text-[17px] font-semibold text-white">
-            IOK Diamond Bar |{" "}
+            IOK |{" "}
             {new Date(date + "T12:00:00").toLocaleDateString("en-US", {
               month: "long",
               day: "numeric",
